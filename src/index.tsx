@@ -3,6 +3,9 @@ import { View, Text, ViewProps, TextProps } from 'react-native'
 import SuperTextInput from './SuperTextInput'
 import ScalingView from './ScalingView'
 import { Table, Cell, Row } from './Table'
+export { default as SuperTextInput } from './SuperTextInput'
+export * from './Table'
+export { default as ScalingView } from './ScalingView'
 
 const Separator = () => <View style={{ width: '100%', height: 2, backgroundColor: 'black' }} />
 const Box = (props: React.PropsWithChildren<ViewProps>) => <View style={{ margin: 20 }} {...props} />

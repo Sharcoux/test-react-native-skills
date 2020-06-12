@@ -1,5 +1,5 @@
 {
-  "name": "CantooTest",
+  "name": "@cantoo/rn-test",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,13 +9,19 @@
     "start": "react-native start",
     "lint": "eslint --fix .",
     "build": "webpack",
+    "test": "jest",
     "web": "webpack-dev-server --open --mode development"
   },
   "dependencies": {
+    "@types/jest": "^26.0.0",
+    "babel-jest": "^26.0.1",
+    "eslint-plugin-jest": "^23.13.2",
+    "jest": "^26.0.1",
     "react": "16.11.0",
     "react-dom": "^16.13.1",
     "react-native": "0.62.2",
-    "react-native-web": "^0.12.2"
+    "react-native-web": "^0.12.2",
+    "ts-jest": "^26.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -51,6 +57,9 @@
     "hooks": {
       "pre-commit": "tsc --noEmit && lint-staged"
     }
+  },
+  "jest": {
+    "preset": "react-native-web"
   },
   "lint-staged": {
     "*.[tj]s?(x)": [
